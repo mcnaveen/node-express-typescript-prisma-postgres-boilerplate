@@ -27,7 +27,6 @@ cd api-boilerplate
 
 > I'm using `pnpm` as a package manager. You can also use package manager of your choice.
 
-```
 
 - Install dependencies
 
