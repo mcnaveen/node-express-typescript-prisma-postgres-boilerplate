@@ -1,6 +1,9 @@
-## Node Express Typescript Prisma Boilerplate
+<h1 align="center">Node Express Typescript Prisma Postgres Boilerplate</h1>
 
-🦄 Starter template for your Express Prisma MySQL API
+<p align="center">🦄 Starter template for your Express Prisma Postgres API</p>
+
+![npm i cart](images/cover.png)
+
 
 ## 🍔 Stack Specs
 
@@ -8,30 +11,34 @@
 - Express
 - TypeScript
 - Prisma
-- MySQL
+- Postgres
 
 ## 🧬 Development
 
 - Clone the repository
 
 ```
-git clone https://github.com/mcnaveen/node-express-prisma-boilerplate nepb
+git clone https://github.com/mcnaveen/node-express-typescript-prisma-postgres-boilerplate api-boilerplate
 ```
 - Cd into the project directory
 ```
-cd nepb
+cd api-boilerplate
+```
+
+> I'm using `pnpm` as a package manager. You can also use package manager of your choice.
+
 ```
 
 - Install dependencies
 
 ```
-yarn install
+pnpm install
 ```
 
-- Create a Database in MySQL (or) You can use GUI to create a database
+- Create a Database in Postgres (or) You can use GUI to create a database
 
 ```
-mysql> CREATE DATABASE express;
+postgres=# CREATE DATABASE express;
 ```
 
 - Copy the `.env.sample` file as `.env`
@@ -40,10 +47,10 @@ mysql> CREATE DATABASE express;
 cp .env.sample .env
 ```
 
-- Edit the MySQL Details in the `.env` file
+- Edit the Postgres Details in the `.env` file
 
 ```
-DATABASE_URL="mysql://USERNAME:PASSWORD@localhost:3306/DBNAME?schema=public"
+DATABASE_URL="postgresql://postgres:password@dev@localhost:5432/express"
 ```
 
 - Push the Prisma Schema into Database
@@ -55,7 +62,7 @@ npx prisma migrate dev
 - Run the development server
 
 ```
-yarn dev
+pnpm dev
 ```
 
 ## 🚀 Production Build
@@ -63,13 +70,13 @@ yarn dev
 - Run the production build
 
 ```
-yarn build
+pnpm build
 ```
 
 - Start the production server
 
 ```
-yarn start
+pnpm start
 ```
 
 > Your production build is available on `dist` folder
